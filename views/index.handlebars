@@ -1,0 +1,38 @@
+<h2>Burgers to eat</h2>
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  <li>
+    {{burger_name}}
+    <button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+      EAT ME!
+    </button>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>burgers devoured</h2>
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  <li>
+    {{burger_name}}
+    <button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+      EATEN!
+    </button>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<div>
+  <h2>Create A Burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+</div>
