@@ -3,6 +3,7 @@ var mysql = require('mysql');
 
 var connection;
 
+// Conditional to use either the JawsDB or the local one
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

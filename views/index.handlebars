@@ -12,6 +12,8 @@
   </div>
   <div class="jumbotron d-flex justify-content-around">
     <div>
+      {{!-- Loops through the burger table and only displays the 
+      uneaten ones. Also adds a button to eat them --}}
       <h2 class="text-center mb-4">Burgers To Eat</h2>
       <ul class="list-group">
         {{#each burgers}}
@@ -27,6 +29,7 @@
       </ul>
     </div>
     <div>
+      {{!-- Displays eaten burgers from the burgers table --}}
       <h2 class="text-center mb-4">Burgers Devoured</h2>
       <ul class="list-group">
         {{#each burgers}}
@@ -41,6 +44,7 @@
   </div>
 </div>
 
+{{!-- Form for creating a new burger to be eaten --}}
 <div class="container mb-5">
   <div class="text-center">
     <h2>Create A Burger</h2>
